@@ -3,11 +3,11 @@ mapping_online: true     # set to 'true' until mapping offline fixed (see Discus
 real_time: true         # in a slow CPU, real_time ensures to always output to latest odometry (possibly skipping points)
 
 # Topics
-points_topic: "/velodyne_points"
+points_topic: "/rslidar_points"
 imus_topic: "/can/IMU"
 
 # Publishers
-high_quality_publish: true   # true: Publishes the map without downsampling, can be slower. false: Publishes the downsampled map.  
+high_quality_publish: false   # true: Publishes the map without downsampling, can be slower. false: Publishes the downsampled map.  
 
 # Extrinsics
 estimate_extrinsics: true

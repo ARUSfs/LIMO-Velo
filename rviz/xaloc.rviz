@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /State1/Shape1
         - /Mapper (Accum)1
+        - /PointCloud21
       Splitter Ratio: 0.5
     Tree Height: 503
   - Class: rviz/Selection
@@ -26,7 +27,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: Mapper (Accum)
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -108,19 +109,19 @@ Visualization Manager:
       Class: rviz/PointCloud2
       Color: 255; 255; 255
       Color Transformer: Intensity
-      Decay Time: 200000
+      Decay Time: 0
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Min Color: 0; 0; 0
+      Min Color: 247; 255; 0
       Name: Mapper (Accum)
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
       Size (Pixels): 2
-      Size (m): 0.019999999552965164
+      Size (m): 0.05000000074505806
       Style: Points
-      Topic: /limovelo/full_pcl
+      Topic: /limovelo_points
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -194,6 +195,34 @@ Visualization Manager:
       Transport Hint: compressed
       Unreliable: false
       Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.5
+      Style: Flat Squares
+      Topic: /limovelo_map
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 0; 0; 0
@@ -222,7 +251,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 24.044883728027344
+      Distance: 61.35588455200195
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -230,17 +259,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: -28.809425354003906
+        Y: -33.10196304321289
+        Z: -8.419160621997435e-06
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: true
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.24539823830127716
+      Pitch: 0.5897963047027588
       Target Frame: body
-      Yaw: 3.205399751663208
+      Yaw: 2.710399866104126
     Saved:
       - Class: rviz/Orbit
         Distance: 39.322052001953125
